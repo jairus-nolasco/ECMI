@@ -366,10 +366,10 @@
 
 	// Submit results to database
 	// Edit the entries enclosed with < and > accordingly.
-	$con = mysql_connect("localhost","<sql user>","<sql password>");
+	$con = mysql_connect("fdb3.biz.nf","872434_872434","suriaj31");
 	
 	if (!$con) { die('Your results were not recorded. Server connection error.'); }
-	if (!mysql_select_db("<sql database>", $con)) 	{	die('Your results were not recorded. Database error.');	}
+	if (!mysql_select_db("872434_872434", $con)) 	{	die('Your results were not recorded. Database error.');	}
 		
 	$query = "INSERT INTO user (uid, date_entered,intuitive,rational,orient_others,orient_self,morality,pragmatic,follower,innovator) VALUES ('$Name','$Date', '$N', '$R', '$O', '$S', '$M', '$P', '$F', '$I')";
 	if (!mysql_query($query)) 
